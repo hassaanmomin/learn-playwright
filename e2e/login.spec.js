@@ -13,7 +13,7 @@ test.afterAll(async () => {
 }) */
 
 test.describe('Learn', () => {
-    test.only('Login using valid credentials', async ({ page, context }) => {
+    test('Login using valid credentials', async ({ page, context }) => {
         await page.goto('https://demoblaze.com/')
         await expect.soft(page).toHaveTitle('STORE')
         await page.locator('id=login2').click()
