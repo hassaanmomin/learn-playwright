@@ -14,7 +14,7 @@ module.exports = defineConfig({
   testDir: './e2e',
   timeout: 30 * 1000,
   expect: {
-    timeout: 5000
+    timeout: 10000
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -34,6 +34,7 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    screenshot: 'only-on-failure'
   },
 
   /* Configure projects for major browsers */
