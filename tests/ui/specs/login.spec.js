@@ -1,5 +1,4 @@
 const { test, expect } = require('@playwright/test')
-
 const { loginPage } = require('../pages/login')
 
 /* let context
@@ -14,12 +13,15 @@ test.afterAll(async () => {
     await context.tracing.stop({path: 'test_trace.zip'})
 }) */
 
+test.use({ storageState: '.auth/admin.json' })
+
 test.describe('Learn', () => {
     test('Login using valid credentials', async ({ page, context }) => {
-        const Login = new loginPage(page)
-        await page.goto('https://demoblaze.com/')
-        await expect.soft(page).toHaveTitle('STORE')
-        await Login.login('pavanol', 'test@123')
+        //const Login = new loginPage(page)
+        await page.goto('https://demoqa.com/profile')
+        expect(await page.getByText('Currently you are not logged into the Book Store application, please visit the login page to enter or register page to register yourself.')).not.toBeVisible()
+
+        //await Login.login('pavanol', 'test@123')
 
         /* await page.locator('id=login2').click()
         await expect(page.locator('id=logInModal')).toBeVisible()
@@ -31,13 +33,13 @@ test.describe('Learn', () => {
         // await page.pause() */
     })
 
-    test('Working with multiple elements', async ({ page }) => {
-        await page.goto('https://demoblaze.com/index.html')
-        await page.locator('[class="card-title"]').first().waitFor();
-        const products = await page.$$('[class="card-title"] a');
-        for (const product of products) {
-            const name = await product.textContent();
-            console.log(name);
-        }
-    })
+    /*  test('Working with multiple elements', async ({ page }) => {
+          await page.goto('https://demoblaze.com/index.html')
+          await page.locator('[class="card-title"]').first().waitFor();
+          const products = await page.$$('[class="card-title"] a');
+          for (const product of products) {
+              const name = await product.textContent();
+              console.log(name);
+          }
+      }) */
 })
