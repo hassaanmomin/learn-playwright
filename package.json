@@ -12,6 +12,7 @@
     "@types/node": "^20.10.6"
   },
   "dependencies": {
+    "@applitools/eyes-playwright": "^1.23.7",
     "dotenv": "^16.4.1"
   }
 }
