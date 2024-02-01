@@ -1,6 +1,6 @@
-const { expect } = require('@playwright/test')
+import { expect } from '@playwright/test'
 
-exports.loginPage = class loginPage {
+export class loginPage {
     /**
     * @param {import('@playwright/test').Page} page
     */
