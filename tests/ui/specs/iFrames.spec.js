@@ -1,4 +1,4 @@
-const { expect, test } = require("@playwright/test")
+import { expect, test } from "@playwright/test"
 
 test.describe('iFrames', () => {
     test('Locate frames and interact with elements within', async ({ page }) => {

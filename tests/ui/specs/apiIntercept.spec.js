@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test')
+import { test, expect } from '@playwright/test'
 
 test.describe('API Interception Test', () => {
     test('should intercept the API call and validate the response from the browser', async ({ page }) => {

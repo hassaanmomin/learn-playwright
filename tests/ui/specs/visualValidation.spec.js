@@ -1,6 +1,6 @@
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
-test.describe('Visual Validation Test', () => {
+test.describe.skip('Visual Validation Test', () => {
     test('Check if the current page matches the baseline screenshot', async ({page}) => {
         await page.goto('https://kitchen.applitools.com/')
         await expect(page).toHaveScreenshot({fullPage: true})

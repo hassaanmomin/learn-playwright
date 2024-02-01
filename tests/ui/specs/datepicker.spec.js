@@ -1,4 +1,4 @@
-const { expect, test } = require("@playwright/test")
+import { expect, test } from "@playwright/test"
 
 test.describe('Date Picker', () => {
     test('Pick a date', async ({ page }) => {

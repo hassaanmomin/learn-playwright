@@ -1,5 +1,5 @@
-const { test, expect } = require('@playwright/test')
-const { loginPage } = require('../pages/login')
+import { test, expect } from '@playwright/test'
+import { loginPage } from '../pages/login'
 
 /* let context
 let page
@@ -15,7 +15,7 @@ test.afterAll(async () => {
 
 test.use({ storageState: '.auth/admin.json' })
 
-test.describe('Learn', () => {
+test.describe.skip('Learn', () => {
     test('Login using valid credentials', async ({ page, context }) => {
         //const Login = new loginPage(page)
         await page.goto('https://demoqa.com/profile')

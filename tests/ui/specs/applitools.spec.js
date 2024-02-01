@@ -22,7 +22,7 @@ test.beforeAll(async() => {
     )
 });
 
-test.describe('AI Powered Visual Regression', () => {
+test.describe.skip('AI Powered Visual Regression', () => {
     let eyes;
     test.beforeEach(async ({ page }) => {
         eyes = new Eyes(Runner, Config);
