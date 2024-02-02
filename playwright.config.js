@@ -7,7 +7,7 @@ dotenv.config()
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  testDir: './tests',
+  testDir: 'tests',
   timeout: 30 * 1000,
   expect: {
     timeout: 10000
