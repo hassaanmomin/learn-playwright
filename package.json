@@ -11,7 +11,8 @@
     "@playwright/test": "^1.41.2",
     "@types/node": "^20.10.6",
     "lighthouse": "^11.5.0",
-    "playwright-lighthouse": "^4.0.0"
+    "playwright-lighthouse": "^4.0.0",
+    "playwright-slack-report": "^1.1.70"
   },
   "dependencies": {
     "@applitools/eyes-playwright": "^1.23.7",
